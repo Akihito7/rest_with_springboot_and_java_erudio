@@ -11,7 +11,7 @@ public class PersonEntity implements Serializable{
 	private String firstName;
 	private String lastName;
 	private String adrres;
-	private String genre;
+	private String gender;
 
 	public PersonEntity() {
 		
@@ -49,17 +49,17 @@ public class PersonEntity implements Serializable{
 		this.adrres = adrres;
 	}
 
-	public String getGenre() {
-		return genre;
+	public String getGender() {
+		return gender;
 	}
 
-	public void setGenre(String genre) {
-		this.genre = genre;
+	public void setGender(String genre) {
+		this.gender = genre;
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(adrres, firstName, genre, id, lastName);
+		return Objects.hash(adrres, firstName, gender, id, lastName);
 	}
 
 	@Override
@@ -72,7 +72,7 @@ public class PersonEntity implements Serializable{
 			return false;
 		PersonEntity other = (PersonEntity) obj;
 		return Objects.equals(adrres, other.adrres) && Objects.equals(firstName, other.firstName)
-				&& Objects.equals(genre, other.genre) && id == other.id && Objects.equals(lastName, other.lastName);
+				&& Objects.equals(gender, other.gender) && id == other.id && Objects.equals(lastName, other.lastName);
 	}
 	
 	
